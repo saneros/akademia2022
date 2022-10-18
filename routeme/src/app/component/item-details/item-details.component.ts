@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Component } from '@angular/core';
 import { Item } from '../../models/item';
 import { ItemService } from '../../service/item.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-item-details',
@@ -12,10 +12,23 @@ export class ItemDetailsComponent {
 
   item: Item | undefined;
 
-  private itemId: string = '55311130';
+  constructor(private service: ItemService, private activatedRoute: ActivatedRoute, private router: Router) {
+    const itemId = this.activatedRoute.snapshot.paramMap.get('id');
+    if (itemId) {
+      this.service.getItemById(itemId).subscribe((item) => {
+        if (item) {
+          this.item = item;
+        } else {
+          this.noItemFound();
+        }
+      });
+    } else {
+      this.noItemFound();
+    }
+  }
 
-  constructor(private service: ItemService) {
-    this.service.getItemById(this.itemId).subscribe((item) => this.item = item);
+  noItemFound(): void {
+    this.router.navigate(['/']);
   }
 
 }

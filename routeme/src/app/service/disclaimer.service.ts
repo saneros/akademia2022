@@ -12,4 +12,8 @@ export class DisclaimerService {
   setDisclaimer(checked: boolean) {
     this.disclaimer = checked;
   }
+
+  getDisclaimer() {
+    return this.disclaimer;
+  }
 }

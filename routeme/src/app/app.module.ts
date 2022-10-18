@@ -8,6 +8,7 @@ import { ItemsComponent } from './component/items/items.component';
 import { DisclaimerComponent } from './component/disclaimer/disclaimer.component';
 import { ItemDetailsComponent } from './component/item-details/item-details.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './routing/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

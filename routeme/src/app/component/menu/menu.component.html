@@ -1,4 +1,1 @@
-<div>About Us</div>
-<div>Disclaimer</div>
-<div>Items</div>
-<div>Details</div>
+<div *ngFor="let route of routes" routerLink="/{{ route.path }}" routerLinkActive="active">{{ route.path }}</div>

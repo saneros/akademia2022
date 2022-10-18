@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { DisclaimerService } from '../../service/disclaimer.service';
 
 @Component({
@@ -8,7 +8,11 @@ import { DisclaimerService } from '../../service/disclaimer.service';
 })
 export class DisclaimerComponent {
 
-  constructor(private disclaimerService: DisclaimerService) { }
+  checked: boolean;
+
+  constructor(private disclaimerService: DisclaimerService) {
+    this.checked = this.disclaimerService.getDisclaimer();
+  }
 
   onCheckChange($event: any) {
     this.disclaimerService.setDisclaimer($event.target.checked);

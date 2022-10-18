@@ -12,9 +12,13 @@
     font-weight: bold;
     cursor: pointer;
 
+    &.active {
+      background-color: darkcyan;
+    }
+
     &:hover {
       color: aquamarine;
-      background-color: darkcyan;
+      background-color: darkturquoise;
     }
   }
 }
