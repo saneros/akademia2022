@@ -1,0 +1,6 @@
+<h1>Details</h1>
+<ng-container *ngIf="item">
+  <div>{{ item.name }}</div>
+  <div>Width: {{ item.width }}px Height: {{ item.height }}</div>
+  <img class="thumbnail" src="{{ item.url }}">
+</ng-container>
