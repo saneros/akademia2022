@@ -2,4 +2,16 @@
   min-height: 100%;
   display: block;
   border: 1px solid midnightblue;
+  padding: .5em;
+
+  div {
+    padding: .2em;
+    cursor: pointer;
+    display: inline-block;
+
+    &:hover {
+      color: darkcyan;
+      background-color: burlywood;
+    }
+  }
 }
