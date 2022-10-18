@@ -10,5 +10,11 @@
     text-transform: uppercase;
     color: bisque;
     font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+      color: aquamarine;
+      background-color: darkcyan;
+    }
   }
 }
