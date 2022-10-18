@@ -1,4 +1,2 @@
 <h1>Items</h1>
-<div *ngFor="let item of items | async">
-  <div routerLink="/details/{{ item.id }}">{{ item.name }}</div>
-</div>
+<div *ngFor="let item of items | async" routerLink="/details/{{ item.id }}">{{ item.name }}</div>
