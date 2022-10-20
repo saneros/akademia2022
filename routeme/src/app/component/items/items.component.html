@@ -1,2 +1,3 @@
 <h1>Items</h1>
-<div *ngFor="let item of items | async" routerLink="/details/{{ item.id }}">{{ item.name }}</div>
+<div routerLink="/details/fakeid">:: FakeID ::</div>
+<div *ngFor="let item of items | async" routerLink="/items/details/{{ item.id }}">{{ item.name }}</div>

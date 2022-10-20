@@ -28,7 +28,7 @@ export class ItemDetailsComponent {
   }
 
   noItemFound(): void {
-    this.router.navigate(['/']);
+    this.router.navigate(['items'], { replaceUrl: true });
   }
 
 }

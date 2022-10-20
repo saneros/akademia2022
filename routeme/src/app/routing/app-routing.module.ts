@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'about', component: AboutUsComponent, data: { showInMenu: true} },
   { path: 'disclaimer', component: DisclaimerComponent, data: { showInMenu: true}  },
   { path: 'items', component: ItemsComponent, canActivate: [DisclaimerGuard], data: { showInMenu: true}  },
-  { path: 'details/:id', component: ItemDetailsComponent, canActivate: [DisclaimerGuard] },
+  { path: 'items/details/:id', component: ItemDetailsComponent, canActivate: [DisclaimerGuard] },
   { path: '**', redirectTo: 'about' },
 ];
 
