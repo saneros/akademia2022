@@ -1,4 +1,10 @@
-Angular Router (https://angular.io/tutorial/toh-pt5) 
+## Angular Router
+
+- [Overview](https://angular.io/guide/routing-overview)
+- [Heroes tutorial / Routing part](https://angular.io/tutorial/toh-pt5)
+- [Router tutorial](https://angular.io/guide/router-tutorial-toh)
+
+### Indítás
 
 `# cd routeme`
 
@@ -7,7 +13,7 @@ Angular Router (https://angular.io/tutorial/toh-pt5)
 `# ng serve`
 
 
-Feladat
+### Feladat
 
 Kiegészíteni az alkalmazást a következőek szerint: 
 
